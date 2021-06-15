@@ -1,0 +1,30 @@
+<style>
+    td {
+        padding: 10px;
+    }
+
+    table {
+        border-spacing: 10px;
+        border-collapse: separate;
+    }
+</style>
+
+<p>Rate Any Study Material</p>
+<table>
+    <tr>
+        <td>No.</td>
+        <td>Title</td>
+        <td>Description</td>
+        <td>File name</td>
+        <td>Rating</td>
+        <td>Action</td>
+    </tr>
+    <tr *ngFor="let rec of records; let i=index">
+        <td>{{i+1}}</td>
+        <td>{{rec.title}}</td>
+        <td>{{rec.description}}</td>
+        <td>{{rec.filename}}</td>
+        <td><input type='text' [(ngModel)]="rec.rating"></td>
+        <td><button (click)="update(rec._id, rec.rating)">Update</button></td>
+    </tr>
+</table>

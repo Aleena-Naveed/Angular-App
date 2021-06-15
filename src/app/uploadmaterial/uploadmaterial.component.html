@@ -1,0 +1,12 @@
+<p style="font-weight: bold; font-size: 20px; text-decoration: underline;">Upload Study Material</p>
+
+<div>
+  <p>Upload File Here: </p>
+  <input type="file" (change)="uploadmaterial($event)" />
+  <p>Give Title:</p>
+  <input type="text" [(ngModel)]='title' placeholder="Enter Material Title">
+  <p>Add Content Description:</p>
+  <input type="text" [(ngModel)]='description' placeholder="Enter Description">
+  <br>
+  <input type="submit" (click)="handelSubmit($event)">
+</div>
